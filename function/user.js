@@ -34,10 +34,13 @@ exports.registerUser = (firstName,lastName, username, email, mobile, password, g
 
 exports.loginUser = (email, password) => {
     return new Promise((resolve, reject) => {
-        user.findOne({ email: email })
-            .catch((err)=>{
-                console.log(err.message);
-                reject({ status: 500, message: "user not found" })
+        user.find({ email: email })
+            .then(users => {
+                if (users.length == 0) {
+                    reject({ status: 404, message: 'User Not Found !' });
+                } else {
+                    return users[0];
+                }
             })
             .then(user => {
                 console.log(user);
@@ -63,10 +66,13 @@ exports.loginUser = (email, password) => {
 
 exports.changePass = (id,password,newPass)=>{
     return new Promise((resolve, reject) => {
-        user.findOne({ _id: id })
-            .catch((err) => {
-                console.log(err.message);
-                reject({ status: 500, message: "user not found" })
+        user.find({ _id: id })
+            .then(users => {
+                if (users.length == 0) {
+                    reject({ status: 404, message: 'User Not Found !' });
+                } else {
+                    return users[0];
+                }
             })
             .then(user => {
                 console.log(user);

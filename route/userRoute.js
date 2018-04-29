@@ -114,6 +114,11 @@ router.post('/changePassword', (req, res) => {
 
 
 router.get('/signout', (req, res) => {
-
+    util.jwtBLPush(req.headers['x-access-token'])
+    .then((result)=>{
+        res.status(200).json(result)
+    }).catch((err)=>{
+        res.status(500).json(err.message);
+    })
 });
 module.exports = router;
