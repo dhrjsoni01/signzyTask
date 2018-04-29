@@ -1,0 +1,32 @@
+{
+  "name": "signzytask",
+  "version": "1.0.0",
+  "description": "Assignment for internship selection at Signzy.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhrjsoni01/signzyTask.git"
+  },
+  "author": "dhrjsoni01",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dhrjsoni01/signzyTask/issues"
+  },
+  "homepage": "https://github.com/dhrjsoni01/signzyTask#readme",
+  "dependencies": {
+    "basic-auth": "^2.0.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "email-validator": "^2.0.3",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.1.1",
+    "mongoose": "^5.0.3",
+    "morgan": "^1.9.0",
+    "nodemailer": "^4.6.4",
+    "password-validator": "^4.1.1",
+    "randomstring": "^1.1.5"
+  }
+}

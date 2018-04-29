@@ -1,0 +1,6 @@
+{
+    "db": "mongodb://demo:demo@ds113938.mlab.com:13938/demo",
+    "secret": "here put your secret key for jwt",
+    "email": "your email id",
+    "pass": "your passowrd"
+}
